@@ -1,4 +1,4 @@
-setwd('/Users/b.vance/Library/CloudStorage/OneDrive-UniversityofKansas/Research Methods')
+setwd('/Users/b.vance/Library/CloudStorage/OneDrive-UniversityofKansas/Research-Methods/R Practice')
 
 a <- 3
 a
@@ -105,4 +105,14 @@ levels(fac)
 table(fac)
 
 summary(fac)
+
+fac.mifirst <- relevel(fac, ref = "mi")
+levels(fac.mifirst)
+
+sex <- as.factor(c("m", "f"))
+
+levels(sex)
+
+levels(sex) <- c("female", "male")
+levels(sex)
 

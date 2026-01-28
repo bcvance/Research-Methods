@@ -70,3 +70,38 @@ vnum1 ^ 2
 log(vnum1)
 
 round(log(vnum1), 2)
+
+vnum1square <- vnum ^ 2
+vnum1square
+
+stein <- c("a", "rose", "is", "a", "rose", "is", "a", "rose")
+stein
+
+charv <- c("do", "re", "mi", "do")
+charv
+
+which(charv == "do")
+
+grep("do", charv)
+
+gsub("m", "t", charv)
+# doesn't alter original vector
+charv
+
+paste(charv, "!", sep = "")
+
+charv.excl <- paste(charv, "!", sep="")
+charv.excl
+
+#Factors
+
+fac <- as.factor(charv)
+fac
+
+str(fac)
+
+levels(fac)
+
+table(fac)
+
+summary(fac)

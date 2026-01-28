@@ -1,4 +1,4 @@
-setwd('/Users/b.vance/Library/CloudStorage/OneDrive-UniversityofKansas/Research Methods/R Files/R Drafts')
+setwd('/Users/b.vance/Library/CloudStorage/OneDrive-UniversityofKansas/Research Methods')
 
 a <- 3
 a
@@ -105,5 +105,4 @@ levels(fac)
 table(fac)
 
 summary(fac)
-
 

@@ -105,3 +105,5 @@ levels(fac)
 table(fac)
 
 summary(fac)
+
+

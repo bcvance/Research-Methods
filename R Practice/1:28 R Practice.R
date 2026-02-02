@@ -116,3 +116,45 @@ levels(sex)
 levels(sex) <- c("female", "male")
 levels(sex)
 
+gender <- factor(c("M", "F", "M", "F", "M", "F"))
+gender
+
+group <- factor(c("A", "A", "B", "A", "B", "B"))
+group
+
+table(group, gender)
+
+#Matrices
+m <- cbind(1:5, 10:6)
+m
+
+n <- rbind(1:5, 10:6)
+n
+
+m1 <- matrix(c(2, 7, 5, 3, 8, 11, 2, 4), nrow=2)
+m1
+
+dim(m1)
+
+m1[ , 1]
+m1[2, ]
+m1[2, 3]
+m1[ , c(1,3)]
+m1[ , -2]
+
+rownames(m1) <- c("X", "Y")
+colnames(m1) <- c("A", "B", "C", "D")
+m1
+
+t(m1)
+m1b <- t(m1)
+
+#Data Frames
+
+group <- factor(c("A", "A", "B", "A", "B", "B"))
+gender <- factor(c("M", "F", "M", "F", "M", "F"))
+grade <- c(2.3, 1.7, 5, 3, 1.3, 5)
+
+df <- data.frame(group, gender, grade)
+df
+getwd()

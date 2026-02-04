@@ -33,9 +33,25 @@ summary(data)
 
 hist(data$RT)
 
-data$LogRT <- log(data$RT)
-head(data)
-hist(data$LogRT)
-
 agRT <- aggregate(data = data, RT ~ Condition, FUN = mean)
-agRT
+agRT$RT <- round(agRT$RT,0)
+
+agr.all <- aggregate(data = data, RT ~ Condition + Related, FUN = mean)
+agr.all$RT <- round(agr.all$RT, 0)
+
+library("tidyr")
+
+agr.all <- spread(data = agr.all, key = Related, value = RT)
+
+agr.all$Effect <- agr.all$rel - agr.all$unrel
+agr.all
+
+agr.percent <- aggregate(data = data, Accuracy ~ Subject, FUN = mean)
+agr.percent$Accuracy <- round(agr.percent$Accuracy, 2) * 100
+agr.percent$Accuracy <- sort(agr.percent$Accuracy)
+agr.percent
+
+agr.acc <- aggregate(data=data, Accuracy ~ Condition + Related, FUN = mean)
+agr.acc$Accuracy <- round(agr.acc$Accuracy, 2) * 100
+agr.acc <- spread(data = agr.acc, key = Related, value = Accuracy)
+agr.acc
